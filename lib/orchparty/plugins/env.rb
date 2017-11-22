@@ -17,7 +17,7 @@ module Orchparty
         if options[:output]
           File.write(options[:output], output)
         else
-          puts output
+          print output
         end
       end
 
