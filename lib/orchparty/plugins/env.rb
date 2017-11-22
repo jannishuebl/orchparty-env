@@ -1,30 +1,5 @@
 require 'shellwords'
 module Orchparty
-  class RancherBuilder < HashBuilder
-    def scale(num)
-      @hash ||= AST.hash
-      @hash[:scale]=num
-    end
-    def upgrade_strategy(&block)
-      @hash ||= AST.hash
-      @hash[:upgrade_strategy]=HashBuilder.build(block)
-    end
-    def health_check(&block)
-      @hash ||= AST.hash
-      @hash[:health_check]=HashBuilder.build(block)
-    end
-  end
-
-  class ServiceBuilder
-    def rancher(&block)
-      @node.rancher = RancherBuilder.build(block)
-      self
-    end
-  end
-end
-
-
-module Orchparty
   module Plugin
     module Env
       def self.desc

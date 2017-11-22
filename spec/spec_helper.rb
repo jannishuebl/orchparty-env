@@ -1,6 +1,6 @@
 require "bundler/setup"
 require "orchparty"
-require "orchparty/plugins/rancher_v2.rb"
+require "orchparty/plugins/env.rb"
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure
